@@ -1,0 +1,785 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0%;
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+    z-index:0;
+}
+
+.Font{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-color: hsla(242, 100%, 79%, 0.86);
+    background-image: url('../images/BackgroundBoutique.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:cover;
+    position: fixed;
+    margin: 0;
+}
+
+.PageCentrage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.BarreMenu{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    z-index: 6;
+    position: fixed;
+
+    
+}
+
+
+.BoutonMenu{
+    display: flex;
+    justify-content: center;
+    width: 33%;
+}
+
+#BoutonMenu{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    /*filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(171deg) brightness(101%) contrast(101%);*/
+}
+
+
+
+#useraccountFollowForm{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 50px;
+    right: 20px;
+}
+
+
+
+
+
+.Logo{
+    display: flex;
+    width: 33%;
+    justify-content: center;
+}
+#Logo{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.BoutonConnexion{
+    display: flex;
+    width: 33%;
+    justify-content: center;
+}
+#BoutonConnexion{
+    width: 40px;
+    height: 40px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(171deg) brightness(101%) contrast(101%);
+    
+}
+#VoyantConnexionRed{
+    display: flex;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    right: 15%;
+}
+
+#VoyantConnexionGreen{
+    display: flex;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+    right: 15%;   
+}
+
+#username {
+    display: flex;
+    position: absolute;
+    width: 10rem;
+    height: 50px;
+    right: 50px;
+    
+}
+
+.EspaceConnexion{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    z-index: 7;
+    width: 300px;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    background-color: rgba(0, 0, 255, 0.308);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: 0.3s;
+    margin-top: 100px;
+}
+
+
+.ContainerVoyantPanier{
+    display: flex;
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    color:white;
+    right: 5%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+}
+.VoyantEtatPanier{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    margin-left: 15px;
+    z-index: 9;
+    
+}
+.RecapPanier{
+    display: none;
+    flex-direction: column;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    background-color: rgba(87, 19, 87, 0.699);
+    transition: 0.3s;
+    z-index: 8;
+    margin-right: 10px;
+    margin-top: 100px;
+    color: #a18677;
+}
+
+
+
+
+
+.EspaceMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 0%, 0.9);
+    margin-top: 120px;
+    z-index: 7;
+    color: white;
+    width: 100%;
+    position: fixed;
+    height: 0;
+    transition: ease-in-out 0.8s;
+}
+.NomSousMenu{
+    display: none;
+    flex-direction: row;
+    width : 30%;
+    align-items: center;
+    justify-content: start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    margin-left:5%;
+    text-align: center;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.NomSousMenuOsiris{
+    display: none;
+    width : 30%;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-right: 15px;
+    margin-left:5%;
+    opacity: 0;
+    cursor: pointer;
+    
+}
+
+.NomSousMenuVanille{
+    display: none;
+    flex-direction: row;
+    width : 30%;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    margin-left:5%;
+    margin-right: 15px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#MenuItem{
+    display: flex;
+    text-align: center;
+    letter-spacing: 0.18em;
+    width: 60%;
+}
+
+
+#fleurVanille{
+    max-width: 50px;
+    
+}
+#Cacaosvg{
+    max-width: 35px;
+}
+
+
+
+
+
+.ContainerChoixProduits{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    z-index: 2;
+    background-color: hsla(0, 0%, 0%, 0.3);
+    position: absolute;
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    
+}
+
+.ContainerChoixProduits > section{
+    display: flex;
+    flex-direction: column;
+    width : 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom : 300px;
+    z-index: 2;
+    padding: 50px 150px 150px;
+    
+}
+
+
+
+
+
+
+
+
+section.Vanille{
+    background-color:#D8B4A0;
+    background-image: linear-gradient(rgba(218, 179, 108, 0.918), rgba(14, 14, 11, 0.5)),url('../images/vanilla.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 0px;
+    background-attachment: fixed;
+
+}
+
+#MessageConnexion{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+    transition: all 0.5s;
+    background-color: rgb(54, 96, 109);
+    color: rgb(105, 25, 25);
+    z-index: 10;
+}
+
+.ContainerProduitsVanilleGousses{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    overflow-y: scroll;
+    width: 100%;
+    height: 0;
+    background-color: rgba(66, 21, 3, 0.89);
+}
+
+.ContainerProduitsVanillePoudre{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    overflow-y: scroll;
+    width: 100%;
+    height: 0;
+    background-color: rgba(66, 21, 3, 0.89);
+}
+
+.ProduitCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+    height: 280px;
+    background-color: #a18677;
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: solid black 2px;
+    transition: ease-in-out 0.3s;
+}
+.ProduitCard:hover{
+    transform: scale(1.05);
+}
+#ImgCard18,#ImgCard16,#ImgCard14,#ImgCard12,#ImgCard10{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    background-image: url('../images/ProduitVanille.jpg');
+    background-size: cover;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: solid black 0.15rem;
+    cursor: pointer;
+}
+#Prix{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(58, 3, 3);
+    cursor: pointer;
+}
+#Taille{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: rgb(58, 3, 3) ;
+    cursor: pointer;
+}
+#TxtPrix{
+    color: green;
+    font-size: 1.2rem;
+}
+.InfoCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.InteractionProduit18,.InteractionProduit16,.InteractionProduit14,.InteractionProduit12,.InteractionProduit10{
+    width : 0%;
+    border: none;
+    opacity: 0%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom : 20px;
+    cursor: pointer;
+    background-color: rgb(58, 3, 3) ;
+    color: #D8B4A0;
+    transition: ease-in-out 0.3s;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+
+.InteractionProduit18:hover,.InteractionProduit16:hover,.InteractionProduit14:hover,.InteractionProduit12:hover,.InteractionProduit10:hover{
+    transform: scale(1.1);
+    border-radius: 10px;
+    color: green;
+
+}
+
+
+
+
+
+
+
+
+section.Cacao{
+    background-color:#D8B4A0;
+    background-image: linear-gradient(rgba(218, 179, 108, 0.918), rgba(14, 14, 11, 0.5)),url('../images/Cacao1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 0px;
+    background-attachment: fixed;
+}
+
+.ContainerProduitsCacao{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    overflow-y: scroll;
+    width: 100%;
+    height: 0;
+    background-color: rgba(66, 21, 3, 0.89);
+}
+
+section.Café{
+    background-color:#D8B4A0;
+    background-image: linear-gradient(rgba(218, 179, 108, 0.918), rgba(14, 14, 11, 0.5)),url('../images/Café2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 0px;
+    background-attachment: fixed;
+}
+
+section.Poivre{
+    background-color:#D8B4A0;
+    background-image: linear-gradient(rgba(218, 179, 108, 0.918), rgba(14, 14, 11, 0.5)),url('../images/Poivre.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 0px;
+    background-attachment: fixed;
+}
+
+section.FruitsSec{
+    background-color:#D8B4A0;
+    background-image: linear-gradient(rgba(218, 179, 108, 0.918), rgba(14, 14, 11, 0.5)),url('../images/FruitSec2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 0px;
+    background-attachment: fixed;
+}
+.ContenuSection{
+    display: flex;
+    flex-direction: column;
+    width : 70%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+
+#ParaSection,#ListeChoix{
+    margin: 20px;
+    
+    
+}
+
+#ListeChoix>li{
+    
+    list-style: none;
+    padding: 30px 20px;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #D8B4A0;
+    
+}
+#ListeChoix{
+    display: flex;
+    background-color: rgba(66, 21, 3, 0.89);
+    
+}
+
+#TitreSection{
+    margin-top: 30px;
+    margin-bottom: 70px;
+}
+
+#ParaSection{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    text-align: justify;
+    font-size: larger;
+    background-color: #223843e1;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+
+
+
+.AdminInterfaceContainer{
+    display: flex;
+    position: absolute;
+    width: 40%;
+    height: 0; /*animé*/
+    padding: 0;/*animé*/
+    background-color: #D8B4A0;
+}
+#AdminInterface{
+    opacity: 0;/*animé + setTimeOut*/
+}
+
+div.Champ {
+    display: table-row;
+}
+
+label, input {
+    display: table-cell;
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 10px;
+}
+
+
+#CheckZone{
+    display: flex;
+    flex-direction: column;
+}
+
+#LabelCheck{
+    display: flex;
+    margin: 10px;
+}
+
+
+
+
+.ContainerImgAdmin{
+    display: block;
+    min-width: 280px;
+    height: 280px;
+    background-color: blue;
+    margin-left: 60px;
+    opacity: 0;/*animé + setTimeOut*/
+    
+}
+
+
+
+#croixAdminInterface{
+    display: flex;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    right: 4%;
+    top: 4%;
+}
+
+
+
+.FenetreVoirProduitVanille{
+    display: flex;
+    position: absolute;
+    height: 0vh; /*60vh*/
+    width: 0vw;    /*70vw*/
+    background-color: rgb(105, 105, 170);
+
+}
+#ImgCardFenetre{
+    display: flex;
+    background-image: url('../images/ProduitVanille.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70%;
+    width: 140%;
+    margin: 5%;
+    
+}
+
+
+
+/*Debut InfoCardFenetre Class*/
+
+
+
+.InfoCardFenetre{
+    padding-top: 35px;
+    padding-right: 3%;
+    opacity: 0%;
+}
+
+#LabelProduit{
+    margin-bottom: 25px;
+}
+
+.ChoixUniteProduit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Unite{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 25px;
+}
+.ContainerChoixPorduits{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.ChoixProduitQuantite{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.616);
+    transition: ease 200ms;
+
+}
+.ChoixProduitQuantite:hover{
+    background-color: rgba(88, 10, 10, 0.616);
+}
+.ChoixProduitsUnite{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    border: 0.5px solid black;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    transition: ease 200ms;
+}
+.ChoixProduitsUnite:hover{
+    transform: scale(1.1);
+    background-color: rgba(88, 10, 10, 0.616);
+}
+.ChoixProduitsUnite > p{
+    width: 100%;
+}
+
+.Prix{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.2rem;
+    
+}
+
+.BandeauPrix{
+    margin: 20px;
+    padding: 6px;
+    border: 1px solid rgb(3, 88, 3);
+    border-radius: 10px;
+    background-color: rgba(0, 128, 0, 0.315);
+}
+.ExpressionPrix{
+    padding: 5px;  
+}
+
+#prix{
+    color:  rgb(102, 33, 5);
+}
+
+.PanierFenetre{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.PanierFenetre > button{
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+#PanierFenetre{
+    padding: 8px;
+    background-color: rgba(0, 128, 0, 0.315);
+    border: 1px solid rgb(102, 33, 5);
+    cursor: pointer;
+}
+
+#PanierFenetre:hover{
+    padding: 8px;
+    background-color: rgba(0, 128, 0, 0.61);
+    transition: 0.2s;
+    border-radius: 10px;
+}
+#croixFenetreProduit{
+    display: flex;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 25px;
+    transform: translateY(-15px);
+    filter: invert(14%) sepia(24%) saturate(5881%) hue-rotate(360deg) brightness(94%) contrast(97%);
+    cursor: pointer;
+}
+
+/*Fin InfoCardFenetre Class*/
+
+
+
+
+
+
+li{
+text-decoration: none;
+color: #D8B4A0;
+transition: all ease 0.2s;
+cursor: pointer;
+}
+li:hover{
+background-color:rgba(255, 0, 0, 0.705);
+}
+li#ListItem:hover{
+    background-color: transparent;
+}
+
+h1,h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    letter-spacing: 0.1em;
+}
+h4,p{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #EFF1F3;
+    word-spacing: 0.1em;
+
+}
+h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #D8B4A0;
+}
