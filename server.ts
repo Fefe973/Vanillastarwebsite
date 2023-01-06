@@ -38,7 +38,7 @@ app.use(async(ctx,next) => {
 
 
  
-console.log(`Server running on port ${port}`);
+console.log(`Server running on portal ${port}`);
 
 await app.listen({ port: +port })
 
