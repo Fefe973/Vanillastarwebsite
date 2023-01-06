@@ -40,5 +40,5 @@ app.use(async(ctx,next) => {
  
 console.log(`Server running on portal ${port}`);
 
-await app.listen({ port: +port })
+await app.listen();
 
