@@ -1,0 +1,692 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0%;
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+}
+
+.Font{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(242, 100%, 79%, 0.86);
+    z-index: 2;
+    scroll-behavior: smooth;
+}
+
+.LandingPage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-image: url('../images/Montagne.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    scroll-behavior: smooth;
+    
+}
+.Filtre{
+    display: flex;
+    top: 120px;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #D8B4A0;
+    opacity: 0.5;
+    z-index: 3;
+    
+}
+
+.BarreMenu{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    z-index: 6;
+    position: fixed;
+    
+}
+
+
+.BoutonMenu{
+    display: flex;
+    justify-content: center;
+    width: 33%;
+}
+
+#BoutonMenu{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    /*filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(171deg) brightness(101%) contrast(101%);*/
+}
+
+
+
+
+
+
+
+
+
+.Logo{
+    display: flex;
+    width: 33%;
+    justify-content: center;
+}
+#Logo{
+    width: 100px;
+    height: 100px;
+}
+.BoutonConnexion{
+    display: flex;
+    width: 33%;
+    justify-content: center;  
+}
+
+#BoutonConnexion{
+    width: 40px;
+    height: 40px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(171deg) brightness(101%) contrast(101%);
+    cursor: pointer;  
+}
+
+.FenetreConnexion{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 200px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(77, 77, 165);
+    z-index: 6;
+    right: 100px;
+    top: 120px;
+}
+
+.Connektion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    color:rgb(112, 47, 47);
+    transition: ease-in-out 0.8s;   
+}
+
+.Connektion:hover{
+    background-color: #6095af;
+    cursor: pointer;
+}
+
+
+.Compte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    color:rgb(112, 47, 47);
+    transition: ease-in-out 0.8s;
+}
+
+.Compte:hover{
+    background-color: #183e52;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.EspaceMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 0%, 0.9);
+    margin-top: 120px;
+    z-index: 7;
+    color: white;
+    width: 100%;
+    position: fixed;
+    height: 0;
+    transition: ease-in-out 0.8s;
+}
+.NomSousMenu{
+    display: none;
+    flex-direction: row;
+    width : 30%;
+    align-items: center;
+    justify-content: start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    margin-left:5%;
+    text-align: center;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.NomSousMenuOsiris{
+    display: none;
+    width : 30%;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-right: 15px;
+    margin-left:5%;
+    opacity: 0;
+    cursor: pointer;
+    
+}
+
+.NomSousMenuVanille{
+    display: none;
+    flex-direction: row;
+    width : 30%;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 15px;
+    margin-top: 50px;
+    margin-left:5%;
+    margin-right: 15px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#MenuItem{
+    display: flex;
+    text-align: center;
+    letter-spacing: 0.18em;
+    width: 60%;
+}
+
+
+#fleurVanille{
+    max-width: 50px;
+    
+}
+#Cacaosvg{
+    max-width: 35px;
+}
+
+
+
+
+
+
+
+.Presentation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    z-index: 4;
+    margin-top: 200px;
+   
+}
+
+
+#OBV{
+    padding: 30px;
+}
+#TitrePresentation{
+    padding: 20px;
+    color: #755b4e;
+}
+.ContainerFleche{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin-top : 200px;
+}
+#Fleche{
+    transform: rotate(90deg);
+    filter: invert(19%) sepia(12%) saturate(1424%) hue-rotate(155deg) brightness(96%) contrast(95%);
+    cursor: pointer;
+}
+
+#fleche:hover{
+    transform: scale(1.1);
+}
+
+
+#Intro{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    margin-top: 260px;
+    background-image: url('../images/damn2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+
+
+
+
+section.Vanille{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 150px;
+    
+}
+.ContenuIntro{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.ContainerAnime{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+    margin: 5%;
+}
+#Mitch{
+    height: 500px;
+    width: 500px;
+    border-radius: 50px;
+    border: solid #223843;
+}
+.ContainerExplication{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+    justify-content: center;
+    background-color: #223843;
+    flex-shrink: 2;
+
+
+}
+
+#VanilleExplication{
+    width : 80%;
+    text-align: start;
+    color: #DBD3D8;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    word-spacing: 0.4em;
+}
+
+.ButtonsVanille{
+    padding: 10px;
+    display: flex;
+}
+.ButtonsIntro{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 20px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+button.Découvrir{
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color:rgb(112, 47, 47);
+    color: white;
+    border: solid black 1px;
+    margin: 20px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button.Découvrir:hover{
+    background-color:rgb(179, 20, 20);
+}
+
+
+.TailleVanille{
+    display: flex;
+    position: absolute;
+    z-index: 6;
+    align-items: center;
+    justify-content: center;
+    background-color:   rgb(112, 47, 47);
+    width: 15%;
+    padding: 10px;
+    left: -200px;
+    opacity: 0;
+}
+
+.RegleAnime{
+    display: flex;
+    position: absolute;
+    z-index: 6;
+    height: 800px;
+    width : 80px;
+    left: 35%;
+    top: 950px;
+    opacity: 0;
+}
+
+.Trait{
+    display: flex;
+    position: absolute;
+    height: 5px;
+    width : 0px;
+    border-radius: 5px;
+    background-color:#223843;
+    z-index: 6;
+    left: 31%;
+    top: 1440px;
+    transform: rotate(45deg);
+}
+
+.Carres{
+    display: flex;
+    flex-direction : column;
+    align-items: center;
+    justify-content: center;
+    height: 0px;
+    width: auto;
+    position : absolute;
+    z-index: 6;
+    background-color: #223843;
+    left : 35%;
+}
+
+.CarreNoir{
+    display: flex;
+    height : 30px;
+    width: 30px;
+    background-color: black;
+    margin: 20px;
+    cursor: pointer;
+}
+
+
+.CarreRouge{
+    display: flex;
+    height : 30px;
+    width: 30px;
+    background-color: rgb(112, 47, 47);
+    margin: 20px;
+    cursor: pointer;
+}
+
+.CouleurVanille{
+    display: flex;
+    position: absolute;
+    z-index: 6;
+    align-items: center;
+    justify-content: center;
+    background-color:   #223843;
+    width: 15%;
+    padding: 10px;
+    left: -200px;
+    opacity: 0;
+}
+
+
+.Hygro{
+    display: flex;
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.ContainerHygro{
+    display: flex;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    transform: translate(425px,-80px);
+    transition: 300ms ease;
+    opacity: 0;
+}
+.DescHygro{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 6;
+    align-items: center;
+    justify-content: center;
+    background-color:   #68582d;
+    width: 15%;
+    padding: 25px;
+    left: -500px;
+    opacity: 1;
+    top: -125px;
+}
+#FlechesHygro{
+    width: 25px;
+    height: 20px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(171deg) brightness(101%) contrast(101%);
+    padding: 5px;
+    
+    
+    
+}
+#FlecheHygroLeft,#FlecheHygroRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid white;
+    transition: 200ms;
+}
+#FlecheHygroLeft:hover,#FlecheHygroRight:hover{
+    background-color: rgb(70, 42, 10);
+    cursor: pointer;
+}
+
+.ContainerButton{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#VoyantConnexionRed{
+    display: flex;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    right: 15%;
+    
+}
+
+#VoyantConnexionGreen{
+    display: flex;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+    right: 15%;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.ProduitsExotiques{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 50px;
+    background-color: hsla(22, 47%, 18%, 0.3);
+    border-style: dashed;
+    
+}
+
+#CaféImg{
+    height: 500px;
+    width: 500px;
+    border: solid black;
+    box-shadow: 5px 10px 18px black;
+    transition:  0.5s;
+    border-radius: 50px;
+}
+
+
+
+
+#ExotiqueExplication{
+    width : 80%;
+    text-align: start;
+    color: #DBD3D8;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    word-spacing: 0.4em;
+    
+
+}
+
+#TitreIntroCafé{
+    color: white;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+
+.Poivre{
+
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+    padding-top: 50px;
+    
+    
+}
+
+h2#TitreIntroPoivre{
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+#PoivreImg{
+    /*max-width:100%;
+    max-height:100%;*/
+    width : 650px;
+    height: 500px;
+    border: solid black;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+
+
+
+h1,h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #223843;
+    
+}
+h4,p{
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #EFF1F3;
+    word-spacing: 0.2em;
+
+}
+h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #D8B4A0;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+@media (max-width: 1245px ) {
+    .ContainerHygro{
+        transform: translate(350px,-100px);
+    }
+  }
+  @media (max-width: 1100px ) {
+    .ContainerHygro{
+        transform: translate(250px,-100px);
+    }
+  }
+  @media (max-width: 900px ) {
+    .ContainerHygro{
+        transform: translate(100px,-100px);
+    }
+  }
+
