@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Boutique</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./boutique/BoutiqueStyle.css">
+        
+        <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class='Font'>
+        </div>
+        <div class='BarreMenu'>
+
+                        <div class='BoutonMenu'>
+                            <div id='BoutonMenu'>
+                                <svg id="MenuCarre" data-name="MenuCarre" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.97 264.67" fill='white'>
+                                <title>menu</title>
+                                <g id="Menu">
+                                <path id="BarreHaute" d="M12,84.21H372.94a12,12,0,1,0,0-24.06H12a12,12,0,1,0,0,24.06Z" transform="translate(0 -60.15)"/>
+                                <path id="BarreMilieu" d="M372.94,180.46H12a12,12,0,1,0,0,24H372.94a12,12,0,1,0,0-24Z" transform="translate(0 -60.15)"/>
+                                <path id="BarreBas" d="M372.94,300.76H12a12,12,0,0,0,0,24.06H372.94a12,12,0,0,0,0-24.06Z" transform="translate(0 -60.15)"/>
+                                </g>
+                                </svg>
+                            </div>
+                            
+                        </div>
+                        <div class='Logo'>
+                            <img id='Logo' src='images/LogoPreciousStones.svg'>
+                        </div>
+                        <div class='BoutonConnexion'>
+                            <img id='BoutonConnexion' src='icones/svg/avatar.svg'>
+                            <% if (Voyant) { %>
+                                <div id="VoyantConnexionGreen"></div>
+                               <h4 id="UserIdBoutique"><%= UserIdBout %></h4>
+                               <div id="fromOtherPage"><%= fromOtherPage %></div>
+                               
+                                <%} else if(!Voyant) { %>
+                                    <div id="VoyantConnexionRed"></div>
+                              <% } %>
+                              
+                              <div class='EspaceConnexion'>
+                                <a href='http://localhost:5000/OBV/connexion'><button>Connexion</button></a>
+                                <p>Vous n'avez pas de compte ?</p>
+                                <a href='http://localhost:5000/OBV/register'><button>Créer un compte</button></a>
+                                <form action="/OBV/useraccountLinked" id="useraccountFollowForm" method="post" class="form-example" enctype='multipart/form-data'>
+                                    
+                                </form>
+                            </div>
+                            
+                            <div class='RecapPanier'>
+                                <form action="/OBV/panier"  method="post" id="PanierEnCoursExport" enctype='multipart/form-data'>
+                                    
+
+
+
+
+
+
+                              <button type="submit" id='BoutonRecapPanier'>Valider</button>
+                              
+                                    <button id='DeleteRecapPanier'>Supprimer le panier</button>
+
+
+                                </form>
+                              
+                                
+                            </div>
+
+                        </div>
+                        <div class='ContainerVoyantPanier'>
+                            <p>Panier : </p>
+                            <div class='VoyantEtatPanier'>0</div>
+                        </div>
+                        
+            </div>
+            <div class='EspaceMenu'>
+                        <div class='NomSousMenuVanille'>
+                            <h3 id='MenuItem'>Vanille</h3>
+                            <svg id="fleurVanille" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 89.21 90.21"><defs><style>.cls-1,.cls-10,.cls-11,.cls-12,.cls-13,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8,.cls-9{stroke:#000;stroke-miterlimit:10;}.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7,.cls-8{stroke-width:0.5px;}.cls-1{fill:url(#Dégradé_sans_nom_120);}.cls-2{fill:url(#Dégradé_sans_nom_119);}.cls-3{fill:url(#Dégradé_sans_nom_119-2);}.cls-4{fill:url(#Dégradé_sans_nom_119-3);}.cls-5{fill:url(#Dégradé_sans_nom_102);}.cls-6{fill:url(#Dégradé_sans_nom_102-2);}.cls-7{fill:url(#Dégradé_sans_nom_105);}.cls-8{fill:url(#Dégradé_sans_nom_71);}.cls-13,.cls-9{stroke-width:0.25px;}.cls-9{fill:url(#Dégradé_sans_nom_63);}.cls-10,.cls-11,.cls-12{stroke-width:0.1px;}.cls-10{fill:url(#Dégradé_sans_nom_121);}.cls-11{fill:url(#Dégradé_sans_nom_63-2);}.cls-12{fill:none;}.cls-13{fill:url(#Dégradé_sans_nom_118);}</style><radialGradient id="Dégradé_sans_nom_120" cx="83.8" cy="83.57" r="39.57" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#dd9e1f"/><stop offset="0" stop-color="#c8951c"/><stop offset="0.01" stop-color="#a48617"/><stop offset="0.02" stop-color="#847813"/><stop offset="0.04" stop-color="#686d0f"/><stop offset="0.05" stop-color="#52640c"/><stop offset="0.06" stop-color="#415d0a"/><stop offset="0.08" stop-color="#365808"/><stop offset="0.11" stop-color="#2f5507"/><stop offset="0.18" stop-color="#2d5407"/></radialGradient><radialGradient id="Dégradé_sans_nom_119" cx="103.53" cy="77.78" r="3.11" gradientTransform="translate(0 -61.32) scale(1 1.79)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#dd9e1f"/><stop offset="0.01" stop-color="#c8951c"/><stop offset="0.03" stop-color="#a48617"/><stop offset="0.06" stop-color="#847813"/><stop offset="0.09" stop-color="#686d0f"/><stop offset="0.12" stop-color="#52640c"/><stop offset="0.16" stop-color="#415d0a"/><stop offset="0.21" stop-color="#365808"/><stop offset="0.28" stop-color="#2f5507"/><stop offset="0.46" stop-color="#2d5407"/></radialGradient><radialGradient id="Dégradé_sans_nom_119-2" cx="111.35" cy="74.86" r="12.6" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="#Dégradé_sans_nom_119"/><radialGradient id="Dégradé_sans_nom_119-3" cx="139.15" cy="86.21" fx="154.75305202030958" r="33" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="#Dégradé_sans_nom_119"/><radialGradient id="Dégradé_sans_nom_102" cx="103.44" cy="102.43" fx="81.41925990345842" fy="94.07407026356768" r="41.82" gradientTransform="translate(59.03 210.76) rotate(-95.64) scale(1 0.54)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="0.09" stop-color="#fefbf6"/><stop offset="0.23" stop-color="#faf0dc"/><stop offset="0.41" stop-color="#f3deb2"/><stop offset="0.63" stop-color="#ebc579"/><stop offset="0.87" stop-color="#e0a530"/><stop offset="0.92" stop-color="#dd9e1f"/><stop offset="0.94" stop-color="#da9d1f"/><stop offset="0.95" stop-color="#d2991d"/><stop offset="0.96" stop-color="#c3931c"/><stop offset="0.97" stop-color="#af8b19"/><stop offset="0.98" stop-color="#947f15"/><stop offset="0.99" stop-color="#737211"/><stop offset="1" stop-color="#4d610b"/><stop offset="1" stop-color="#2d5407"/></radialGradient><radialGradient id="Dégradé_sans_nom_102-2" cx="103.31" cy="105.14" fx="103.31491539009949" fy="105.14019899984851" r="5.32" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="#Dégradé_sans_nom_102"/><radialGradient id="Dégradé_sans_nom_105" cx="102.74" cy="106.14" r="3.19" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="0.06" stop-color="#fefbf6"/><stop offset="0.17" stop-color="#faf0dc"/><stop offset="0.3" stop-color="#f3deb2"/><stop offset="0.46" stop-color="#ebc579"/><stop offset="0.63" stop-color="#e0a530"/><stop offset="0.67" stop-color="#dd9e1f"/><stop offset="0.76" stop-color="#dc9f22"/><stop offset="0.81" stop-color="#dba22a"/><stop offset="0.86" stop-color="#d8a839"/><stop offset="0.9" stop-color="#d3b04d"/><stop offset="0.94" stop-color="#ceba68"/><stop offset="0.97" stop-color="#c7c688"/><stop offset="1" stop-color="#c0d3ab"/></radialGradient><radialGradient id="Dégradé_sans_nom_71" cx="122.11" cy="115.62" fx="86.69443907809787" r="39.72" gradientTransform="translate(128.66 250.01) rotate(-117.61) scale(1 0.49)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#dd9e1f"/><stop offset="0.02" stop-color="#c8951c"/><stop offset="0.08" stop-color="#a48617"/><stop offset="0.13" stop-color="#847813"/><stop offset="0.2" stop-color="#686d0f"/><stop offset="0.27" stop-color="#52640c"/><stop offset="0.35" stop-color="#415d0a"/><stop offset="0.45" stop-color="#365808"/><stop offset="0.6" stop-color="#2f5507"/><stop offset="1" stop-color="#2d5407"/></radialGradient><radialGradient id="Dégradé_sans_nom_63" cx="84.23" cy="109.09" fx="73.47236689128917" fy="134.58306115839318" r="27.67" gradientTransform="translate(0 -37.16) scale(1 1.34)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#dd9e1f"/><stop offset="0.02" stop-color="#d0991d"/><stop offset="0.08" stop-color="#aa8818"/><stop offset="0.14" stop-color="#887a13"/><stop offset="0.22" stop-color="#6c6e10"/><stop offset="0.3" stop-color="#54650c"/><stop offset="0.39" stop-color="#435d0a"/><stop offset="0.5" stop-color="#365808"/><stop offset="0.65" stop-color="#2f5507"/><stop offset="1" stop-color="#2d5407"/></radialGradient><linearGradient id="Dégradé_sans_nom_121" x1="41.11" y1="52.25" x2="41.93" y2="52.25" xlink:href="#Dégradé_sans_nom_120"/><radialGradient id="Dégradé_sans_nom_63-2" cx="109.29" cy="112.17" fx="109.29366302490234" fy="112.1718864440918" r="2.88" gradientTransform="translate(-66.8 -100.51) scale(1 1.34)" xlink:href="#Dégradé_sans_nom_63"/><radialGradient id="Dégradé_sans_nom_118" cx="111.63" cy="109.4" r="7.58" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="0.05" stop-color="#fefbf6"/><stop offset="0.14" stop-color="#faf0dc"/><stop offset="0.26" stop-color="#f3deb2"/><stop offset="0.39" stop-color="#ebc579"/><stop offset="0.54" stop-color="#e0a530"/><stop offset="0.57" stop-color="#dd9e1f"/></radialGradient></defs>
+
+                            <title>fleurVanille</title>
+
+                            <path id="Feuille_Gauche" data-name="Feuille Gauche" class="cls-1" d="M98,77.27c-.37,0-.9,0-1.52.1a14.41,14.41,0,0,0-2.12.41c-1.18.37-1.51,1.07-3.74,3.43a29.51,29.51,0,0,1-2.13,2.13,18.52,18.52,0,0,1-3.94,2.53c-1.26.6-1.45.51-3.64,1.51a14.78,14.78,0,0,0-2.12,1.11,9.77,9.77,0,0,0-2.23,1.93,14.52,14.52,0,0,0-1.72,2.83,6,6,0,0,1-1.51,2.22,3.72,3.72,0,0,1-1,.61,4.22,4.22,0,0,1-3.43-.51c-.46-.24-1.94-1-1.82-1.82.06-.43.55-.7,1.11-1a8.05,8.05,0,0,1,2-.71c1.29-.38,2-1.47,3-3A18.34,18.34,0,0,0,75,85.16c1.32-3.56,1-4.55,2.33-6.17a11.49,11.49,0,0,1,2.23-1.92,17.32,17.32,0,0,1,4.85-2.73c2-.72,3-1.09,4.35-.81.81.17,1.28.49,2,.3,1-.24.93-1,2-1.82a7.19,7.19,0,0,1,5.36-1l.36.08a4,4,0,0,1,1.06.41,2.32,2.32,0,0,1,.81.72c.37.67-.11,1.55-.61,2.53A10.42,10.42,0,0,1,98,77.27Z" transform="translate(-66.8 -62.3)"/>
+                            <path class="cls-2" d="M99.28,76.63a25.87,25.87,0,0,1,3.78,1.55,4.71,4.71,0,0,0,2,.74,4.11,4.11,0,0,0,2.7-1" transform="translate(-66.8 -62.3)"/>
+
+                            <path class="cls-3" d="M101.37,66a17.47,17.47,0,0,1,2.56,3.24c1.44,2.35,1.13,3.14,2.7,5.39a38,38,0,0,0,2.38,3l.86.91.63.67c.11.11.64.65,1.32,1.29a23.32,23.32,0,0,0,3,2.56,12,12,0,0,1,1.85,1.33c.38.35.37.4.83.83a4.79,4.79,0,0,0,1.89,1.28,6.66,6.66,0,0,0,1.21.07c1.73,0,2.21.09,2.23,0s-.51-.33-.54-.27.82,1,1.42.81a1,1,0,0,0,.53-.88,1.57,1.57,0,0,0-.26-.81,6.52,6.52,0,0,1-.54-1.75,10.75,10.75,0,0,1-.14-1.62c-.12-1.51-.24-1.52-.27-2.49a10.57,10.57,0,0,0,0-1.82,10.05,10.05,0,0,0-.71-1.9c-.28-.63-.33-.71-.57-1.27-.51-1.19-.5-1.37-.74-1.89a11.45,11.45,0,0,0-1.82-2.29,19.81,19.81,0,0,0-2-2,17.15,17.15,0,0,0-2.29-1.61c-.39-.25-.94-.55-2-1.15l-2.09-1.15A16.33,16.33,0,0,0,107,62.94a14.82,14.82,0,0,0-2.3-.33,5.26,5.26,0,0,0-2.09.06,3.39,3.39,0,0,0-1.21.61,4.07,4.07,0,0,0-.94,1.42c-.63,1.2-1,1.8-1.06,2.1a13.72,13.72,0,0,0-.63,2.14c-.13.6-.22,1.11-.27,1.49" transform="translate(-66.8 -62.3)"/>
+
+                            <path class="cls-4" d="M124.8,86.67c.56.86,1.36.65,5,1.62l2.84.81c1.52.44,2.39.71,3,.91,1.5.47,2.24.7,2.73.91A18.54,18.54,0,0,0,140.88,92c1.17.34,1.36.08,2.22.41s.94.66,2.23,1.72a21.12,21.12,0,0,0,3.13,2.12A7.07,7.07,0,0,0,151,97.39c1.13.13,1.29-.32,2.83-.2.78.06,1.26.22,1.62-.1a1.34,1.34,0,0,0,.3-1.11,1.74,1.74,0,0,0-.61-1,7.93,7.93,0,0,0-2.22-1.32c-.86-.47-1.49-1.46-2.73-3.44a22.92,22.92,0,0,0-1.42-2.32,17.66,17.66,0,0,0-2.32-2.23c-1.28-1.13-1.92-1.69-2.33-2a35.51,35.51,0,0,0-3.33-2.33c-2.17-1.37-2.36-1.33-4.66-2.73-3.3-2-3.46-2.41-5.05-2.93a9.11,9.11,0,0,0-4-.61,12,12,0,0,1-2.32.31c-1.08,0-1.59-.24-1.92.1s-.24,1-.11,1.82.34.92.51,1.82,0,1,.2,2c.12.59.19.62.41,1.52.16.69.2,1,.3,1.52A7.66,7.66,0,0,0,124.8,86.67Z" transform="translate(-66.8 -62.3)"/>
+
+                            <path id="fleur" class="cls-5" d="M98.47,77.51c-.55.48-.17,1-.67,4.38-.19,1.26-.28,1.4-.47,2.83s-.3,2.22-.34,3a5.94,5.94,0,0,1-.2,2.09c-.24.56-.55.82-1.52,1.69a21.32,21.32,0,0,0-2.43,2.32A6,6,0,0,0,92.13,97a13.53,13.53,0,0,0,.31,2.32c.5,2.86.76,4.29.81,4.45a2,2,0,0,1,0,1.42c-.2.4-.53.51-.51.81s.44.33.71.81,0,.49.2,1.21a2.67,2.67,0,0,0,.56,1.21c.34.38.61.39.61.56s-.79.31-1.88.86c-.68.35-1.36.69-1.51,1.32a6.71,6.71,0,0,1-.15.85,3,3,0,0,1-.36.76c-.31.47-.52.45-.71.76a1.79,1.79,0,0,0-.05,1.32c.23.78.71.88.91,1.77a1.59,1.59,0,0,1,0,.6c0,.48-.27.62-.4,1a2.22,2.22,0,0,0,.15,1.52c.21.54.46.65.61,1.26.08.37,0,.38.1.56.21.43.63.4,1.21.91a4,4,0,0,1,.51.56c.32.41.35.56.76,1.16a5.45,5.45,0,0,0,.6.81,4.18,4.18,0,0,0,1,.66,14.14,14.14,0,0,0,2,1.06,4.2,4.2,0,0,0,1.36.25c.4,0,.38-.07.86-.1.94-.06,1.17.18,1.77,0a1.48,1.48,0,0,0,.71-.4c.24-.27.21-.47.45-1.07s.4-1,.66-1,.28.37.76.61c.26.13.69.23.86,0s-.11-.76,0-.86.37.19.71.4a3.43,3.43,0,0,0,1.67.51,4.68,4.68,0,0,0,1.82-.2A12,12,0,0,0,111,125a9,9,0,0,0,1.42-.81,2.85,2.85,0,0,0,.81-.71c.23-.34.26-.64.51-.71s.28.09.5.16c.54.15,1.11-.29,1.47-.56s1.06-.81,1-1.36-.61-.64-.61-1.22c0-.27.12-.26.25-.71a2.86,2.86,0,0,0,0-1.72c-.14-.4-.3-.47-.25-.7s.52-.39.61-.76-.18-.36-.3-.86.05-.62,0-1.27c0-.48-.15-.44-.26-1.06s0-.67-.1-1.51a3.65,3.65,0,0,0-.35-1.37,3.34,3.34,0,0,0-.41-.56,2.18,2.18,0,0,0-.81-.6c-.33-.13-.38,0-.86-.15a3.73,3.73,0,0,1-.8-.36c-.51-.26-.89-.47-.86-.65s.17-.11.55-.36a1.69,1.69,0,0,0,.51-.45,1.11,1.11,0,0,0,.2-.56,1,1,0,0,0-.2-.61c-.19-.28-.33-.29-.61-.55a4,4,0,0,1-.61-.86,2.15,2.15,0,0,1-.4-.91,2.36,2.36,0,0,1,.15-.66,3.51,3.51,0,0,0,0-1.21,6.38,6.38,0,0,1,.12-1.57,21.79,21.79,0,0,0,.2-2.78A7.88,7.88,0,0,0,111,93.7c-1-2.27-2.71-5.32-3.69-5-.35.09-.52.62-1.26.81a1.65,1.65,0,0,1-.66.05c-.83-.22-1-2.38-1.06-4.1-.19-4.6.33-5.11-.3-6.17C102.84,77.29,99.59,76.52,98.47,77.51Z" transform="translate(-66.8 -62.3)"/>
+
+                            <path id="interieurFleur" class="cls-6" d="M98.81,107.91c-.32-.83,0-1-.34-2.22-.29-.94-.67-1.31-.54-2,0-.12.14-.71.54-.87s.51.14,1,.13a1.88,1.88,0,0,0,1.15-.47c.47-.42.29-.73.81-1.35a3.26,3.26,0,0,1,.94-.74,1.86,1.86,0,0,1,1.42-.4c.25.07.35.23.67.6a15,15,0,0,0,1.62,1.55,6.21,6.21,0,0,0,1.35,1c.62.3.92.29,1.14.6.08.1.24.37.07,1.42a5.53,5.53,0,0,1-.94,2.63,7.76,7.76,0,0,1-1.15,1.14c-.39.34-.76.62-.94.75a5.11,5.11,0,0,1-4.86.27A4,4,0,0,1,98.81,107.91Z" transform="translate(-66.8 -62.3)"/>
+
+                            <path id="interieur" class="cls-7" d="M105.15,109.19c.87-3,1.06-5.2.81-5.39a2.3,2.3,0,0,0-.68-.34h0s-1-.26-1.58-.33a6,6,0,0,0-2.22.27,6.33,6.33,0,0,0-2,1.08l1.41,4.72Z" transform="translate(-66.8 -62.3)"/>
+
+                            <path id="feuilleBasDroite" class="cls-8" d="M108.11,79.09c.8.31,1.19,1.86,1.92,5,.44,1.84.43,2.16.91,4.25.16.7.25,1,1.12,4.35,1.21,4.64,1.27,4.86,1.41,5.36.38,1.3.86,2.93,1.62,5a30.58,30.58,0,0,0,2.93,6.37c.77,1.18.86,1,3.64,4.24a54.42,54.42,0,0,1,5.26,6.58c.31.49,1.09,1.94,2.63,4.85,1.34,2.51,2,3.79,2.43,4.75,1,2.23.84,2.58,2,5.36.5,1.2.94,2.11,1.62,3.54,1.36,2.88,1.55,3,2.12,4.45.85,2.13.43,1.79,1.32,4.05.77,2,1.37,2.94.91,3.94a2.18,2.18,0,0,1-1,1c-1.26.56-2.83-.47-3.65-1-7.39-4.87-6.63-4.17-7.28-4.75-5.29-4.77-8.08-7-10.72-10.42-2.2-2.86-4.42-6.41-5.29-7.79-.26-.41-1.79-1.56-1.48-2.42.19-.54.86-.42,1.92-1.42.67-.62.7-1,1.21-1.11.67-.21,1,.23,1.62,0A2.12,2.12,0,0,0,116.4,122c.2-.46.15-.71.11-2.13a23.42,23.42,0,0,1,0-2.53c.07-1.08.18-1,.2-1.82a19,19,0,0,0-.31-2.73,11,11,0,0,0-.4-2.32,3.1,3.1,0,0,0-.51-1.11,4,4,0,0,0-1.71-1.12c-.85-.35-1.28-.35-1.32-.6s.79-.55.91-1.22c0-.18,0-.41-.4-1.11-.68-1.14-1-1.15-1.22-1.72s0-.74,0-2.53c0-1-.08-1-.1-2.22,0-1.77.18-1.68.1-2.63a9.35,9.35,0,0,0-1.11-3.44,12,12,0,0,0-1.21-2c-.79-1-1.35-1.79-2.13-1.82s-1.28.82-1.72.61-.21-.92-.4-2.23a18.86,18.86,0,0,0-.61-2.22c-.4-1.68-.65-2.68-.3-3.64C104.83,79.87,106.86,78.61,108.11,79.09Z" transform="translate(-66.8 -62.3)"/>
+
+                            <path id="feuilleBasGauche" class="cls-9" d="M93.65,124.8c.28,1.14-.58,2.26-2.73,4.55a64.29,64.29,0,0,1-8,7.58c-3.8,3-5.61,4-6.67,3.44-.62-.35-.72-1.1-1.72-1.41a19.5,19.5,0,0,0-2.33-.21,3.15,3.15,0,0,1-1.31-.3c-.86-.61-.66-2.34-.51-3.24C71.46,129,75.45,122,75.45,122c4.68-8.29,7-12.47,8.59-14.36a35.2,35.2,0,0,0,4-5.46,29.83,29.83,0,0,0,3.34-8.9c.18-.93.35-2.75.7-6.37.21-2.16.85-4.24,1.22-6.37a3.47,3.47,0,0,1,.91-2.13c1.09-1,2.84-.75,3.54-.6v4.34c1,5,.07,7.08-1,8a17.73,17.73,0,0,0-2.13,1.62A7.62,7.62,0,0,0,92.44,95a24.38,24.38,0,0,0-.2,2.63c-.19,3.14-.2,3.77.2,4.55a4.71,4.71,0,0,1,.6,1.21,11.93,11.93,0,0,1,.11,2.12,7.49,7.49,0,0,0,.3,1.52,15.48,15.48,0,0,0,.81,2.12,15.42,15.42,0,0,1-1.11,1.52c-.9,1-1.36.65-1.82,1.42-.3.48-.11.6-.51,1.61s-.53.86-.61,1.32c-.11.74.32,1,.61,2.22A16.61,16.61,0,0,1,91,119a19.73,19.73,0,0,0,.31,2.23C91.8,123.26,93.33,123.49,93.65,124.8Z" transform="translate(-66.8 -62.3)"/>
+
+                            <line class="cls-10" x1="41.11" y1="47.43" x2="41.93" y2="57.07"/>
+
+                            <line class="cls-11" x1="41.52" y1="46.42" x2="43.47" y2="53.33"/>
+
+                            <line class="cls-12" x1="35.04" y1="51.21" x2="35.04" y2="54.85"/>
+
+                            <line class="cls-12" x1="28.03" y1="48.91" x2="28.03" y2="52.25"/>
+
+                            <path class="cls-12" d="M93,122.81a6.1,6.1,0,0,1,2.5-1,5.82,5.82,0,0,1,1.21-.07" transform="translate(-66.8 -62.3)"/>
+
+                            <path class="cls-12" d="M108.25,120.65a2.11,2.11,0,0,0,.33,1.08,2.6,2.6,0,0,0,2.7.88" transform="translate(-66.8 -62.3)"/>
+
+                            <path class="cls-13" d="M110.27,108.38c-.11.73-.44.69-.54,1.49a3.52,3.52,0,0,0,.4,2c.39.68.67.56,1,1.28.27.56.19.83.54,1.21s.74.62,1,.47.13-.46.4-1.14a2.92,2.92,0,0,1,.29-.57,1.13,1.13,0,0,1,.12-.17c.15-.3-.12-.72-.75-1.82,0,0-.13-.24-.4-.81s-.27-.61-.2-.74.58-.2.6-.34-.55-.27-1.07-.68c-.77-.59-1.25-1.68-1-2l0,0c.37-.34,1,.09,1.25-.11s0-.94,0-1c-.33-1-1.36-1.64-1.55-1.49s0,.55.2.95.35.66.27.81-.68,0-.94.2S110.47,107.13,110.27,108.38Z" transform="translate(-66.8 -62.3)"/>
+
+                            </svg>
+
+
+                        </div>
+                        <div class='NomSousMenu'>
+                                <h3 id='MenuItem'>Cacao</h3>
+                                <svg id="Cacaosvg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 78.95 147.59">
+                                <defs><style>.cls-1{fill:url(#Dégradé_sans_nom_32);}.cls-2{fill:#452900;}.cls-3{fill:#6b2638;}.cls-4{fill:url(#Dégradé_sans_nom_16);}.cls-5{fill:url(#Dégradé_sans_nom_37);}.cls-6{fill:url(#Dégradé_sans_nom_15);}</style>
+                                <linearGradient id="Dégradé_sans_nom_32" x1="33.29" y1="33.63" x2="107.91" y2="33.63" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#a9aaae"/><stop offset="0.19" stop-color="#4d330e"/><stop offset="0.61" stop-color="#452900"/>
+                                <stop offset="1" stop-color="#121e12"/>
+                                </linearGradient><linearGradient id="Dégradé_sans_nom_16" x1="33.29" y1="37.46" x2="66.75" y2="37.46" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#a9aaae"/><stop offset="0.8" stop-color="#452900"/><stop offset="1" stop-color="#121e12"/></linearGradient>
+                                <linearGradient id="Dégradé_sans_nom_37" x1="41.03" y1="12.88" x2="74.67" y2="12.88" gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#a9aaae"/><stop offset="0.74" stop-color="#452900"/>
+                                <stop offset="1" stop-color="#121e12"/></linearGradient>
+                                <linearGradient id="Dégradé_sans_nom_15" x1="84.09" y1="6.45" x2="107.78" y2="6.45" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a9aaae"/>
+                                <stop offset="0.73" stop-color="#452900"/><stop offset="1" stop-color="#121e12"/></linearGradient></defs>
+
+                                <title>Cacaosvg</title>
+
+                                <path id="Branche" class="cls-1" d="M107.91,0,99,7.17a27.27,27.27,0,0,0-6.47,6.29,40.42,40.42,0,0,0-3.24,5.46c-2,4-1.73,5.11-3.43,6.68s-2.89,1.51-3.44,3c-.36,1-.15,1.85.4,3.64,1.78,5.79,2.74,6.91,2.23,8.09-.4.92-1.7,1.92-5.87,2V38.94a7.2,7.2,0,0,0-3-3.43c-3.17-1.73-6.82-.07-8.29.6-2.54,1.16-2.94,2.22-6.48,5.26-4.37,3.77-4.58,2.86-8.49,6.27a43,43,0,0,0-7.69,8.29c-.36.54-1.6,2.4-3.43,4.86A26.63,26.63,0,0,1,39.15,64a13.91,13.91,0,0,1-5.86,3.24V14.34c2.23-1.82,3.89-3.38,5.05-4.52S40.12,8,41.17,8c1.34,0,1.68,1.31,3.23,1.42a4.67,4.67,0,0,0,3-1.22c1-.79.86-1.16,2.22-2.42,1-1,1.57-1.46,2.43-1.62a12.54,12.54,0,0,1,2.63.2c1.42,1,2.19,1,2.63.81.8-.35.84-1.38,1.82-3A11.58,11.58,0,0,1,60.79,0Z" transform="translate(-33.29 0.98)"/>
+                                <path id="Feve" class="cls-2" d="M78,43c2.29,0,2.67-1.27,5.26-1.42,1.65-.09,2.89.37,3,0S84.91,40.45,85.06,40s2.93-.09,5.12.27c4,.66,4.06,1.05,5.93,1a3.42,3.42,0,0,1,1.76.21c1.57.76,1.95,3.11,2,3.5.24,1.47-.18,2,.33,3.44a4.29,4.29,0,0,0,.81,1.42,7.78,7.78,0,0,0,1.55,1.07,12.22,12.22,0,0,1,1.76,1.35A4,4,0,0,1,105.62,54c.16.56,0,.61.07,1.42.13,1.2.56,1.31.8,2.63.16.84,0,.89.21,1.75a13.51,13.51,0,0,0,.54,1.55c.42,1.26.31,1.39.67,2.3.11.27.32.69.74,1.55a13.91,13.91,0,0,1,.74,1.48c.27,1-.14,1.3.07,2.76a7.46,7.46,0,0,0,.2,1,5.93,5.93,0,0,0,.81,1.95c.08,0-.12-.81-.13-.81a21.75,21.75,0,0,1,.6,4.25c.06,1.86-.25,1.84-.27,3.78,0,2.37.45,2.4.61,5.39.1,1.92,0,4.07,0,4.58a11.44,11.44,0,0,0,0,3c.35,1.68,1.09,2,.94,3.24-.11,1-.64,1-.94,2.29a9.53,9.53,0,0,0,0,2.56,14,14,0,0,1-.27,3.91c-.28,1.11-.47,1-.94,2.7-.18.62-.3,1.17-.54,2.29A22.83,22.83,0,0,1,109,112c-.46,1.18-.86,1.27-1.21,2.42a13.27,13.27,0,0,0-.27,1.75c-.37,1.55-1.52,1.8-2.84,3.38-1.62,1.94-.65,2.46-2.29,4.31-1.12,1.26-1.92,1.41-2.83,3a10.71,10.71,0,0,1-.94,1.75c-1,1.17-1.69.89-2.7,2s-.67,1.58-1.48,2-1.19,0-2,.27-1,1.19-2.39,3.48c-1,1.66-1.11,1.41-1.82,2.73-.82,1.51-.75,1.94-1.52,3.13a10.65,10.65,0,0,1-1.92,2.23c-1.12,1-2.82,2.51-4.35,2.12-.35-.09-.72-.29-2.12-2.33-1.56-2.27-1.86-3.13-3.34-5.36-1-1.59-1.07-1.4-1.82-2.63-1.08-1.78-1.15-2.33-2-3.13s-1.25-.5-2.43-1.52a10.49,10.49,0,0,1-2.22-2.93c-.42-.76-.56-1.18-.81-1.72a18.2,18.2,0,0,0-3-4.25c-1.12-1.44-1.69-3.12-2.83-6.47-.39-1.13-.84-2.89-1.72-6.37-1-3.94-1.51-5.94-1.72-7.18a68.38,68.38,0,0,1-.71-7c-.27-3.74-.16-4.49,0-5.15.22-.89.57-1.79,1-3.74,0,0,.23-1,.4-2,.47-2.69.1-4.74,0-9.1-.09-4.59.25-5.88.51-6.67.57-1.72.94-1.62,1.42-3.24,1-3.57-.56-4.79.6-6.77s3.27-1.69,3.68-3.61c.21-1-.27-1.54.2-2.6s1.12-.88,1.75-1.88c1-1.51-.1-2.56.84-4.28a7.5,7.5,0,0,1,1.76-1.86A9.88,9.88,0,0,1,70.33,43a8.64,8.64,0,0,1,4.45-.68C76.7,42.43,76.52,43,78,43Z" transform="translate(-33.29 0.98)"/>
+                                <path id="Ligne1" class="cls-3" d="M65.54,56.44a68.49,68.49,0,0,0-1.82,7c-.17.74-.36,1.66-.71,3-.41,1.61-.61,2.42-.71,2.73a7.07,7.07,0,0,0-.6,2.63c0,.73.23.67.3,1.52A5.83,5.83,0,0,1,61.6,76c-.35.82-.57.77-.91,1.51a7,7,0,0,0-.41,3c-.06,1.59-.18,1.07-.4,3.84-.13,1.62-.21,2.6-.21,3.94,0,1.79.17,3.92.21,4.45.12,1.74.2,2.08,0,2.73-.44,1.37-1.24,1.32-1.72,2.63-.36,1-.21,1.89.1,3.74.28,1.7.46,1.54.71,3,.31,1.93,0,2.42.4,4.34.07.34.47,2.45.81,2.43s.56-3.61.61-5c.15-4.65-.37-5.08.1-7.69.38-2.16.83-2.36.91-4.25s-.39-2.18-.51-4.65c-.12-2.64.42-2.62.31-5.56-.09-2.24-.42-2.6-.11-3.94a19.49,19.49,0,0,1,1.42-3.34C64,75.05,64.13,75,64.22,74.34,64.4,73.12,63.94,73,64,71c0-.89.14-1,.2-2.22a20,20,0,0,0,0-2.43C64.09,63.16,65.66,56.47,65.54,56.44Z" transform="translate(-33.29 0.98)"/>
+                                <path id="Ligne_2" data-name="Ligne 2" class="cls-3" d="M76.76,45.42c-1.09-.12-2.61,6.19-4.45,13.85-1.65,6.89-.9,5.71-2.52,12.44-.91,3.75-1.44,5.32-1.22,7.89a27.12,27.12,0,0,1,.31,5.25c-.1,1.55-.28,1.59-.51,3.75a38.18,38.18,0,0,0-.2,5.76,39,39,0,0,0,.5,4.75c.44,2.73.72,2.89,1,5.16,0,.45,0,.49.3,4.55a34.49,34.49,0,0,0,.4,4.65,16.58,16.58,0,0,0,1.42,4c2.82,5.87,5.34,19.8,5.76,19.72s-.88-6.9-1.31-9.41c-.65-3.76-1.08-5.64-1.52-7.28a29.49,29.49,0,0,0-1.52-5c-.71-1.36-1.41-2.12-1.21-3.24s1.18-1.42,1.11-2.43-.77-.89-1.41-2.22a7.71,7.71,0,0,1-.61-2.93,22.29,22.29,0,0,1,0-2.84,25.53,25.53,0,0,0-.4-4.55c-.66-5.17,1.19-6.52.5-12.23a43.57,43.57,0,0,1-.6-4.45A27.66,27.66,0,0,1,71,74.88c.65-4.34,1.17-4.79,1.75-8.16,1.22-7.09-.39-9.23,1.89-12.14,1-1.34,2-1.63,2.63-3.3C78.26,48.67,77.52,45.5,76.76,45.42Z" transform="translate(-33.29 0.98)"/>
+                                <path id="Ligne3" class="cls-3" d="M82.22,133.19c-.78-.08-.53-4.13-1.41-14.66-.44-5.27-.67-6.32-.61-9.31.06-2.49.26-3.71.41-8.29.09-3,0-3.63.1-5.36A70.1,70.1,0,0,1,82,84.65C84.2,72.31,81.84,61.27,83.51,61c1-.16,2.28,3.4,2.42,3.77.94,2.52.6,3.8.81,9,.11,2.54.17,1.77.54,8.09.19,3.11.28,4.67.27,5.53a42.82,42.82,0,0,1-1.08,8.76c-1.23,6.07-2.26,6.86-2.43,11.06a44.29,44.29,0,0,0,.14,5.12c.2,2.11.38,2.21.67,4.72a31.28,31.28,0,0,1,.27,6.61,23.49,23.49,0,0,1-.54,3.64C84.2,129,83,133.28,82.22,133.19Z" transform="translate(-33.29 0.98)"/>
+                                <path id="Ligne4" class="cls-3" d="M91.83,129.15a76.74,76.74,0,0,0,5.06-15.78c.55-2.71,1-5.55,1.62-10.11.8-5.57.95-7.56,1-8.5a55.79,55.79,0,0,0,0-9.1c-.32-3.43-.76-4-1.52-9-.57-3.75-.57-5-.91-7.88-1.32-10.91-4.5-17.94-3.61-18.31.5-.2,1.79,1.9,2,2.29C97,55.28,96.9,56.89,97.93,61c.83,3.3,1.11,3,1.89,6.34.38,1.63.3,1.65,1.08,5.79s.91,4.42,1.21,6.48a35.14,35.14,0,0,1,.54,5.93c0,1.19-.08,1-.4,4.85-.27,3.17-.26,3.81-.54,6.88-.18,1.92-.27,2.9-.41,3.77a35.13,35.13,0,0,1-1.34,5.53C97.9,113,92,129.2,91.83,129.15Z" transform="translate(-33.29 0.98)"/>
+                                <path id="Ligne5" class="cls-3" d="M102.75,119.94A96.28,96.28,0,0,0,106,108.42a99.17,99.17,0,0,0,1.82-11.63c.33-3.61.4-6.57.4-8.5a70.19,70.19,0,0,0-.91-12.74,60,60,0,0,0-1.41-6.37c-.57-2-1-3-2.83-8.12-2.39-6.59-2.57-7.28-2.43-7.35.31-.15,2.05,2.58,3.37,5.32a39.89,39.89,0,0,1,2.56,7.22,78.6,78.6,0,0,1,3,15.1s.32,3.63.27,7.28C109.59,103.9,102.86,120,102.75,119.94Z" transform="translate(-33.29 0.98)"/>
+                                <path id="Decolobois" class="cls-4" d="M51.48,48.65c2.93-1,13.59-9.91,15.27-11.32-.18-.17-.46-.42-.81-.71a15.73,15.73,0,0,0-2.83-2.13c-1.4-.72-1.72-.28-2.73-1a5.38,5.38,0,0,1-1.51-1.82c-1.09-1.77-.74-2.42-1.72-3.84-.28-.39-1.33-1.91-2.33-1.72-.34.07-.6.42-1.11,1.11a30.49,30.49,0,0,1-2.23,2.94,4.54,4.54,0,0,1-2.42,1.51,6.71,6.71,0,0,1-1.32,0,12.9,12.9,0,0,0-3.34.41,5,5,0,0,0-2.12.91c-.56.46-.5.69-1.31,1.62a5.32,5.32,0,0,1-1.72,1.51,3.52,3.52,0,0,1-2.63,0L33.29,34.7v6.67c.16.34.75,1.53,1.71,1.62a3,3,0,0,0,1.52-.51c1-.5,1.18-.88,1.51-.81s.64.49.81,2c1.61.35,2,.4,2,.4,1.05.13,1,0,1.41.1.63.22.76.61,1.72,1.62s1.39,1.47,1.82,1.42c.59-.08.56-.89,1.52-1.52.41-.28,1.39-.76,1.92-.41.83.56-.18,2.67.71,3.34A1.73,1.73,0,0,0,51.48,48.65Z" transform="translate(-33.29 0.98)"/>
+                                <path id="Decolobois2" class="cls-5" d="M42.52,13.93C41.58,15.31,41.11,16,41,17c0,.44,0,.77.95,3.91.57,1.93.63,2.07.81,2.3.89,1.14,2.35,1.38,3.77,1.61a8,8,0,0,0,3.37,0c1.86-.43,1.89-1.25,3.78-1.75.7-.19,2.68-.71,3.91.27.9.72.55,1.55,1.35,2,1.41.84,3.59-1.16,4.18-.54.43.46-.36,1.94-.54,1.89s.8-2.28,0-4.85c-.31-1-.58-1-1.08-2.56a16.94,16.94,0,0,1-.68-2.84,11.91,11.91,0,0,1-.13-3.64,9.36,9.36,0,0,1,.94-3.1c.71-1.36,1.18-1.36,2.83-3.37,2.05-2.48,2.24-3.6,2.3-4A3.14,3.14,0,0,0,66.38,0c-1.1-1.36-3.95-1.26-5.26,0-.65.63-.37,1-1.34,2.47C59,3.63,58.5,4.37,57.62,4.63s-1.35-.38-3.24-.27a7.57,7.57,0,0,0-1.62.27,7.48,7.48,0,0,0-2.15,1.08,10.62,10.62,0,0,0-1.35,1.08,14.51,14.51,0,0,0-1.48,1.48C45.55,10.76,44.22,11.44,42.52,13.93Z" transform="translate(-33.29 0.98)"/>
+                                <path id="Decolobois3" class="cls-6" d="M107.78,0c-.87.64-2.22,1.65-3.91,2.88-4,2.88-3.93,2.7-4.59,3.37C97.35,8.19,97,9.6,95.1,10.16c-.88.26-1.06,0-1.89.4-1.64.75-1.77,2.06-3.1,2.29a2.05,2.05,0,0,1-1.89-.54c-.63-.76-.09-2-.4-2.15s-.76,1.36-1.89,1.62a1.64,1.64,0,0,1-1.75-.68c-.32-.67.34-1.56.67-2,1.24-1.67,2.7-1.62,3-2.83a2.33,2.33,0,0,0-.27-1.49c-.5-1.12-1.35-1.24-2-2.15A4,4,0,0,1,84.85,0Z" transform="translate(-33.29 0.98)"/></svg>
+                        </div>
+                        <div class='NomSousMenu'>
+                            <h3 id='MenuItem'>Café</h3>
+                        </div>
+                        <div class='NomSousMenu'>
+                            <h3 id='MenuPoivre'>Poivre</h3>
+                        </div>
+                        <div class='NomSousMenu'>
+                            <h3 id='MenuFruitSec'>Fruits Sec</h3>
+                        </div>
+                        <div class='NomSousMenu'>
+                            <h3 id='MenuMada'>Madagascar</h3>
+                        </div>
+                        <div class='NomSousMenuOsiris'>
+                            <h3 id='MenuOsirisVanilla'>Osiris Vanilla</h3>
+                        </div>
+            </div>
+            
+
+        <div class='PageCentrage'>
+
+            <div class='ContainerChoixProduits'>
+
+                <div class='ContainerTitre'><h1 id='TitreBoutique'>Boutique</h1></div>
+
+                    <section class='Vanille'>
+                        <div class='ContenuSection'>
+                            <h2 id='TitreSection'>Vanille</h2>
+                            <p id='ParaSection'>Trouvez votre bonheur dans les différents produits qui vous sont proposés :  
+                            en poudre, en extrait liquide ou directement en gousses !  </p>
+                            <ul id = 'ListeChoix'>
+                                <li id='Gousses'>Gousses</li>
+                                <li id='Poudre'>Poudre</li>
+                                <li id='ExtraitLiquide'>Extrait liquide</li>
+                            <ul/>
+                        </div>
+                        <button id='AdminInterfaceOpen'>Admin</button>
+                        <div class='AdminInterfaceContainer'>
+                                <div id='croixAdminInterface'><img src='./icones/svg/cancel.svg'/></div>
+                                <form id='AdminInterface' action="" method="get" class="form-example">
+                                <div class="Champ">
+                                    <label for="NomProduit">Nom du produit : </label>
+                                    <input type="text" name="NomProduit" id="NomProduit" required>
+                                </div>
+                                <div id='CheckZone'>
+                                    <div class="Champ" >
+                                        <p id='checkbox'>Type de Produit Vanille :</p>
+                                        <div id='LabelCheck'>
+                                            <label for="CheckGousses">Gousses </label>
+                                            <input type="checkbox" name="CheckGousses" id="CheckGousses" required>
+                                        </div>
+                                        <div id='LabelCheck'>
+                                            <label for="CheckPoudre">Poudre </label>
+                                            <input type="checkbox" name="CheckPoudre" id="CheckPoudre" required>
+                                        </div>
+                                        <div id='LabelCheck'>
+                                            <label for="CheckExtrait">Extrait</label>
+                                            <input type="checkbox" name="CheckExtrait" id="CheckExtrait" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Champ" id='AdminChoixQuantitéTaille'>
+                                    <label for="Quantité">Quantité : </label>
+                                    <input type="text" name="Quantité" id="Quantité" required>
+                                </div>
+                                <div class="Champ">
+                                    <label for="Prix">Prix :</label>
+                                    <input type="text" name="Prix" id="Prix" required>
+                                </div>
+                                <div class="Champ">
+                                    <label for="Description">Description : </label>
+                                    <input type="text" name="Description" id="Decsription" required>
+                                </div>
+                                <div class="Champ">
+                                    <input type="submit" value="Ajouter">
+                                </div>
+                                </form>
+
+                                <div class='ContainerImgAdmin'>
+                                </div>
+                    
+                        </div>
+                        
+                        <div class='ContainerProduitsVanilleGousses'>
+                                
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard18'>
+                                        <button class='InteractionProduit18' id='Voir18-20'>Voir</button>
+                                        <button class='InteractionProduit18' id='Panier18-20'>Panier</button>
+                                    </div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'>
+                                            <p id='TxtPrix'>2€</p>
+                                        </div>
+                                        <div id='Taille'>
+                                            <p id='Taille'>18-20cm </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard16'>
+                                        <button class='InteractionProduit16' id='Voir16-18'>Voir</button>
+                                        <button class='InteractionProduit16' id='Panier16-18'>Panier</button>
+                                    </div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'>
+                                            <p id='TxtPrix'>2€</p>
+                                        </div>
+                                        <div id='Taille'>
+                                            <p id='Taille'>16-18cm </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard14'>
+                                        <button class='InteractionProduit14' id='Voir14-16'>Voir</button>
+                                        <button class='InteractionProduit14' id='Panier14-16'>Panier</button>
+                                    </div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'>
+                                            <p id='TxtPrix'>2€</p>
+                                        </div>
+                                        <div id='Taille'>
+                                            <p id='Taille'>14-16cm </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard12'>
+                                        <button class='InteractionProduit12' id='Voir12-14'>Voir</button>
+                                        <button class='InteractionProduit12' id='Panier12-14'>Panier</button>
+                                    </div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'>
+                                            <p id='TxtPrix'>2€</p>
+                                        </div>
+                                        <div id='Taille'>
+                                            <p id='Taille'>12-14cm </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard10'>
+                                        <button class='InteractionProduit10' id='Voir10-12'>Voir</button>
+                                        <button class='InteractionProduit10' id='Panier10-12'>Panier</button>
+                                    </div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'>
+                                            <p id='TxtPrix'>2€</p>
+                                        </div>
+                                        <div id='Taille'>
+                                            <p id='Taille'>10-12cm </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class='FenetreVoirProduitVanille'>
+                                    <div id='ImgCardFenetre'>
+                                    </div>
+                                    <div class='InfoCardFenetre'>
+                                        <div id='croixFenetreProduit'><img src='./icones/svg/cancel.svg'/></div>
+                                        <h2 id='LabelProduit'>Bourbon Premium 18-20cm</h2>
+                                        <p id='DescProduit'>Vanille Bourbon qualité Gold, brillante, charnues, moeulleuse, souples et offre un parfum riche et intense avec des notes de cacao et caramel pour
+                                            le meilleur de la récolte, idéal pour l'utiliser dans la cuisine salée ou sucré.
+                                        </p>
+                                        <div class='ChoixUniteProduit'>
+                                            <button class='Unite' id='Quantité'>Quantité</button>
+                                            <button class='Unite' id='Poids'>Poids</button>
+                                        </div>
+                                        <div class='ContainerChoixPorduits'>
+                                            <div class='ChoixProduitQuantite' method='post'>
+                                                    <div class='ChoixProduitsUnite'><p id='2g'>2 gousses</p></div>
+                                                    <div class='ChoixProduitsUnite'><p id='5g'>5 gousses</p></div>    
+                                                    <div class='ChoixProduitsUnite'><p id='10g'>10 gousses</p></div>
+                                                    <div class='ChoixProduitsUnite'><p id='50g'>50 gousses</p></div>
+                                                    <div class='ChoixProduitsUnite'><p id='100g'>100 gousses</p></div>
+                                                    <div class='ChoixProduitsUnite'><p id='200g'>200 gousses</p></div>
+                                                    <div class='ChoixProduitsUnite'><p id='500g'>500 gousses</p></div>
+                                                    <div class='ChoixProduitsUnite'><p id='1000g'>1000 gousses</p></div>
+
+                                            </div>
+                                            <div class='ChoixProduitPoids' method='post'>
+                                                <div class='ChoixProduitsUnite'><p id=''></p></div>
+                                                <div class='ChoixProduitsUnite'><p id=''></p></div>    
+                                                <div class='ChoixProduitsUnite'><p id=''></p></div>
+                                                <div class='ChoixProduitsUnite'><p id=''></p></div>
+                                                <div class='ChoixProduitsUnite'><p id=''></p></div>
+                                                <div class='ChoixProduitsUnite'><p id=''></p></div>
+                                                <div class='ChoixProduitsUnite'><p id=''></p></div>
+                                                <div class='ChoixProduitsUnite'><p id=''></p></div>
+                                            </div>
+                                        </div>
+                                        <div class='Prix'>
+                                                <div class='BandeauPrix'>
+                                                    <p id='prix'>Prix :</p>
+                                                </div>
+                                                <div class='ExpressionPrix'>
+                                                    <p id='prixeuros'>Séléctionnez un produit</p>
+                                                </div>
+                                        </div>
+                                        <div class='PanierFenetre'>
+                                            <button  id='PanierFenetreVanille'>Ajouter au panier</button>
+                                            <button  id='RetirerPanierVanille'>Retirer du panier</button>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                        </div>      
+
+                       <div class='ContainerProduitsVanillePoudre'>
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard'>
+                                        <button class='InteractionProduit' id='Voir'>Voir</button>
+                                        <button class='InteractionProduit' id='Panier'>Panier</button>
+                                    </div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'>
+                                            <p id='TxtPrix'>2€</p>
+                                        </div>
+                                        <div id='Taille'>
+                                            <p id='Taille'>18-20cm </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard'></div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'><p id='TxtPrix'>2€</p></div>
+                                        <div id='Taille'><p id='Taille'>18-20cm </p></div>
+                                    </div>
+                                </div>
+
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard'></div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'><p id='TxtPrix'>2€</p></div>
+                                        <div id='Taille'><p id='Taille'>18-20cm </p></div>
+                                    </div>
+                                </div>
+
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard'></div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'><p id='TxtPrix'>2€</p></div>
+                                        <div id='Taille'><p id='Taille'>18-20cm </p></div>
+                                    </div>
+                                </div>
+                        </div>
+                    </section>
+
+                    
+                    <section class='Cacao'>
+                        <div class='ContenuSection'>
+                            <h2 id='TitreSection'>Cacao</h2>
+                            <p id='ParaSection'>Cacao en poudre déjà torréfié ou bien en fèves, 
+                            le cacao de Madagascar est un produit rare et peu répandue, un gôut unique donc, et c'est à vous de l'apprécier  </p>
+                            <ul id ='ListeChoix'>
+                                <li id='Feves'>Fèves</li>
+                                <li>Poudre</li>
+                            <ul/>
+                        </div>
+                        
+                            <div class='ContainerProduitsCacao' id='ContainerProduitsCacao'>
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard'>
+                                        <button class='InteractionProduit' id='Voir'>Voir</button>
+                                        <button class='InteractionProduit' id='Panier'>Panier</button>
+                                    </div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'>
+                                            <p id='TxtPrix'>2€</p>
+                                        </div>
+                                        <div id='Taille'>
+                                            <p id='Taille'>18-20cm </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard'></div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'><p id='TxtPrix'>2€</p></div>
+                                        <div id='Taille'><p id='Taille'>18-20cm </p></div>
+                                    </div>
+                                </div>
+
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard'></div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'><p id='TxtPrix'>2€</p></div>
+                                        <div id='Taille'><p id='Taille'>18-20cm </p></div>
+                                    </div>
+                                </div>
+
+                                <div class='ProduitCard'>
+                                    <div id='ImgCard'></div>
+                                    <div class='InfosCard'>
+                                        <div id='Prix'><p id='TxtPrix'>2€</p></div>
+                                        <div id='Taille'><p id='Taille'>18-20cm </p></div>
+                                    </div>
+                                </div>
+                        </div>
+                    
+                        </section>
+                        </section>
+                    </section>
+                    <section class='Café'>
+                        <div class='ContenuSection'>
+                            <h2 id='TitreSection'>Café</h2>
+                            <p id='ParaSection'>Café en poudre déjà torréfié ou bien en grains, 
+                            le café de Madagascar est un produit rare et peu répandue, un gôut unique donc, et c'est à vous de l'apprécier  </p>
+                            <ul id ='ListeChoix'>
+                                <li><a href=''>Grains</a></li>
+                                <li><a href=''>Poudre</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class='Poivre'>
+                        <div class='ContenuSection'>
+                            <h2 id='TitreSection'>Poivre</h2>
+                            <p id='ParaSection'>Notre poivre est disponible en grains ou déjà réduit en poudre</p>
+                            <ul id ='ListeChoix'>
+                                <li><a href=''>Poudre</a></li>
+                                <li><a href=''>Grains</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class='FruitsSec'>
+                        <div class='ContenuSection'>
+                            <h2 id='TitreSection'>Fruits Secs</h2>
+                            <p id='ParaSection'>Quelques variétés de fruits secs pour composer votre équilibre nutritif ou tout simplement pour le plaisir gustatif ! </p>
+                            <ul id ='ListeChoix'>
+                                <li><a href=''>Raisins</a></li>
+                                <li><a href=''>Amendes</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    
+            </div>    
+        </div>
+        
+        <script async type="module" src="boutique/BAnime.js" defer></script>
+        <script async type="module" src="acceuil/OBV.js" defer></script>
+        <script async type="module" src="acceuil/AdminInterface.js" defer></script>
+        
+        
+        
+        
+        
+        
+        
+       
+
+        
+        
+    </body>
+
+</html>
