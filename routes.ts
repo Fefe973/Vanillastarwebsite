@@ -29,7 +29,7 @@ router.get('/OBV/connexion',verifConnectionConnection);
 
 
 
-router.get('https://vanillastar.deno.dev',verifConnectionAcceuil);
+router.get('/vanillastar.deno.dev',verifConnectionAcceuil);
 
 router.get('/OBV/boutique',verifConnectionBoutique);
 
