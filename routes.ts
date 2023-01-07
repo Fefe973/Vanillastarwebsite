@@ -26,7 +26,7 @@ router.get('/OBV/register',(ctx:any)=>{
 
 //router.get('/OBV/connexion',verifConnectionConnection);
 
-router.get('/vanillastar.deno.dev',verifConnectionConnection);
+router.get('/vanillastar.deno.dev/OBV/acceuil',verifConnectionConnection);
 
 
 router.get('/OBV/acceuil',verifConnectionAcceuil);
