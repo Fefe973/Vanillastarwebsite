@@ -40,5 +40,5 @@ app.use(async(ctx,next) => {
  
 console.log(`Server running on portal ${port}`);
 
-await app.listen({ port: +port, secure: true, certFile: "<path-to-file>/<file-name>.pem", keyFile: "<path-to-file>/<file-name>-key.pem" });
+await app.listen({ port: +port, secure: true, certFile: "./vanillastar.deno.dev.pem", keyFile: "./vanillastar.deno.dev-key.pem" });
 
