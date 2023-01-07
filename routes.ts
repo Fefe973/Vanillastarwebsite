@@ -29,9 +29,11 @@ router.get('/OBV/connexion',verifConnectionConnection);
 
 
 
-router.get('/',verifConnectionAcceuil);
+router.get('/',(ctx:any)=>{
+  ctx.render('./OBV/acceuil/OBV.ejs',{Voyant: true});
+});
 
-router.get('/OBV/acceuil',verifConnectionAcceuil);
+
 
 router.get('/OBV/boutique',verifConnectionBoutique);
 
